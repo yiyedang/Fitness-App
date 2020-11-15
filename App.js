@@ -60,17 +60,17 @@ class App extends React.Component{
             }
         }}>
           {this.state.isLoggedIn ? (
-            <Stack.Screen name="HomeScreen" options={{ title: 'Fiteness App' }} >
+            <Stack.Screen name="HomeScreen" options={{ title: 'Fitness App' }} >
               {(props) => <HomeScreen {...props} 
               username={this.state.username} 
               token={this.state.token}/>}
             </Stack.Screen>
           ) : (
           <>
-            <Stack.Screen name="LoginScreen" options={{ title: 'Fiteness App' }}>
+            <Stack.Screen name="LoginScreen" options={{ title: 'Fitness App' }}>
             {(props) => <LoginScreen {...props} login={this.login}/>}
           </Stack.Screen>
-          <Stack.Screen name="SignupScreen" component={SignupScreen} options={{ title: 'Fiteness App' }}>
+          <Stack.Screen name="SignupScreen" component={SignupScreen} options={{ title: 'Fitness App' }}>
           </Stack.Screen>
           </>
           )}

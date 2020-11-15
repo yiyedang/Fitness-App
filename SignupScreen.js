@@ -38,15 +38,24 @@ export default class SignupScreen extends React.Component{
                 <Text style={styles.logo}>FitnessTracker</Text>
                 <Text style={styles.plain}>New here? Let's get started!</Text>
                 <Text style={styles.plain}>Please create an account below.</Text>
-                <View style={styles.inputView} >
+                <View style={styles.inputView}>
                     <TextInput  
+                    accessible={true}
+                    accessibilityLiveRegion="polite"
+                    accessibilityLabel="Enter username"
+                    accessibilityHint="Tap me and enter your username"
                     style={styles.inputText}
+                    secureTextEntry
                     placeholder="Username" 
                     placeholderTextColor="#fe8484"
                     onChangeText={text => this.setState({username:text})}/>
                 </View>
-                <View style={styles.inputView} >
-                    <TextInput  
+                <View style={styles.inputView}>
+                    <TextInput
+                    accessible={true}
+                    accessibilityLiveRegion="polite"
+                    accessibilityLabel="Enter password"
+                    accessibilityHint="Tap me and enter your password"
                     secureTextEntry
                     style={styles.inputText}
                     placeholder="Password" 
@@ -54,10 +63,16 @@ export default class SignupScreen extends React.Component{
                     onChangeText={text => this.setState({password:text})}/>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
-                    <TouchableOpacity style={styles.btn} onPress={this.handleSignup}>
+                    <TouchableOpacity style={styles.btn} onPress={this.handleSignup}
+                        accessible={true} 
+                        accessibilityLabel="Create account"
+                        accessibilityHint="Tap me to create a new account with provided username and password" >
                         <Text style={styles.btnText}>CREATE ACCOUNT</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.goBack()}>
+                    <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.goBack()}
+                        accessible={true} 
+                        accessibilityLabel="Exit"
+                        accessibilityHint="Tap me to exit the Fitness tracking app" >
                         <Text style={styles.btnText}>NEVERMIND!</Text>
                     </TouchableOpacity>
                 </View>

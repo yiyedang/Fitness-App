@@ -32,17 +32,44 @@ export default class LoginScreen extends React.Component{
   render(){
     return (
       <View style={styles.container}>
-        <Text style={styles.logo}>FitnessTracker</Text>
+        <Text style={styles.logo} accessible={true} >FitnessTracker</Text>
         <Text style={styles.plain}>Welcome! Please login or signup to continue.</Text>
-        <View style={styles.inputView} >
-          <TextInput  
+        <View style={styles.inputView}>
+          <TextInput accessibilityLiveRegion="polite"
+            accessible={true}
+            secureTextEntry
+            // accessibilityActions={[
+            //   { name: 'activate'}
+            // ]}
+            
+            // onAccessibilityAction={(event) => {
+            //   if (event.nativeEvent.actionName === 'activate') {
+            //     Alert.alert('Alert', 'You can now enter your username');
+            //   }
+            //   if (event.nativeEvent.actionName === 'longpress') {
+            //     Alert.alert('Alert', 'You can now paste your username');
+            //   }
+            // }}
+            accessibilityLabel="Enter username"
+            accessibilityHint="Tap me and enter your username"
             style={styles.inputText}
             placeholder="Username" 
             placeholderTextColor="#fe8484"
             onChangeText={text => this.setState({username:text})}/>
         </View>
-        <View style={styles.inputView} >
-          <TextInput  
+        <View style={styles.inputView}>
+          <TextInput accessibilityLiveRegion="polite"
+            accessible={true} 
+            accessibilityLabel="Enter password"
+            accessibilityHint="Tap me and enter your password"
+            // accessibilityActions={[
+            //   { name: 'activate'},
+            // ]}
+            // onAccessibilityAction={(event) => {
+            //   if (event.nativeEvent.actionName === 'activate') {
+            //     Alert.alert('Alert', 'You can now enter your passwor');
+            //   }
+            // }}
             secureTextEntry
             style={styles.inputText}
             placeholder="Password" 
@@ -50,10 +77,20 @@ export default class LoginScreen extends React.Component{
             onChangeText={text => this.setState({password:text})}/>
         </View>
         <View style={{ flexDirection: 'row' }}>
-          <TouchableOpacity style={styles.btn} onPress={this.handleLogin}>
+          <TouchableOpacity 
+            accessible={true} 
+            accessibilityLabel="Log in"
+            accessibilityHint="Tap me to login with your provided username and password" 
+            style={styles.btn} 
+            onPress={this.handleLogin}>
             <Text style={styles.btnText}>LOGIN</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.navigate('SignupScreen')}>
+          <TouchableOpacity 
+          accessible={true} 
+          accessibilityLabel="Sign up"
+          accessibilityHint="Tap me to be directed to the sign up page" 
+          style={styles.btn} 
+          onPress={() => this.props.navigation.navigate('SignupScreen')}>
             <Text style={styles.btnText}>SIGNUP</Text>
           </TouchableOpacity>
         </View>
