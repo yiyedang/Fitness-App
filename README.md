@@ -11,7 +11,7 @@ Create a “Login” view with username and password input fields
 - Provide the user with feedback if there is an error, such as "Username or password is incorrect!"
 - Provide the user with functionality to switch between the login and signup pages (see problem 2). 
 
-![login](https://github.com/yiyedang/Fitness-App/blob/main/images/login.jpg)
+![login](https://github.com/yiyedang/Fitness-App/blob/main/images/login-0.jpg)
 
 ### Problem 2 (1.5 Points)
 Create a “Signup” view with username and password fields
@@ -27,7 +27,7 @@ Create a profile view that allows the logged-in user to view and edit their firs
 - For the time being, this can be the landing page after logging in to the application. We will be expanding the application in React Native 2 𝞪.
 - When the user edits their profile, it should be saved (see the API!)
 
-![profile](https://github.com/yiyedang/Fitness-App/blob/main/images/profile.jpg)
+![profile](https://github.com/yiyedang/Fitness-App/blob/main/images/profile-0.jpg)
 
 
 ## Part II
@@ -73,5 +73,5 @@ Provide the user with the ability to create a new meal, or edit/delete any of th
 - The user should be able to see the total calories and macronutrients consumed for that meal.
 - The user should be able to indicate if the meal was eaten at the current date and time or at some other date and time.
 
-![meals](https://github.com/yiyedang/Fitness-App/blob/main/images/meals.jpg)
-![meal-detail](https://github.com/yiyedang/Fitness-App/blob/main/images/meal-detail.jpg)
+![meals](https://github.com/yiyedang/Fitness-App/blob/main/images/meals-0.jpg)
+![meal-detail](https://github.com/yiyedang/Fitness-App/blob/main/images/meal-detail-0.jpg)
